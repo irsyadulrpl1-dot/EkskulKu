@@ -1,4 +1,4 @@
-import { ekskul, pendaftar } from "@/app/data/ekskul";
+import { ekskul, pendaftar } from "@/app/Data/ekskul";
 
 function jeda(ms: number) {
   return new Promise((r) => setTimeout(r, ms));

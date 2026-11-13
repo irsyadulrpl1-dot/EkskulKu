@@ -5,7 +5,7 @@ export type Ekskul = {
   nama: string;
   kategori: Kategori;
   hari: string;
-  sesi: number; // 1 atau 2
+  sesi: number;
   kuota: number;
   pembina: string;
 };
