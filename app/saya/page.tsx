@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-// Perhatikan perubahan jalur import di bawah ini menjadi folder 'data' (huruf kecil)
 import {
   pendaftar,
   ekskul,
@@ -14,9 +13,6 @@ export const metadata: Metadata = {
   title: "Eskul Saya",
 };
 
-// PERHATIKAN: Baris "export const dynamic = 'force-dynamic';" sudah dihapus
-// karena konflik dengan cacheComponents di Next.js versi terbaru.
-
 export default async function EskulSayaPage() {
   const cookieStore = await cookies();
   const namaSiswa = cookieStore.get("nama_siswa")?.value || "";
@@ -26,7 +22,7 @@ export default async function EskulSayaPage() {
     return (
       <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30 p-6 md:p-12 text-slate-800">
         <div className="max-w-4xl mx-auto space-y-6">
-          <div className="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex justify-between items-center">
+          <div className="bg-white/85 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex justify-between items-center">
             <Link
               href="/"
               className="font-black text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
@@ -93,7 +89,7 @@ export default async function EskulSayaPage() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30 p-6 md:p-12 text-slate-800">
       <div className="max-w-4xl mx-auto space-y-6">
-        <div className="bg-white/80 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex justify-between items-center">
+        <div className="bg-white/85 backdrop-blur-md p-6 md:p-8 rounded-3xl shadow-sm border border-slate-100 flex justify-between items-center">
           <Link
             href="/"
             className="font-black text-2xl bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent"
@@ -117,7 +113,7 @@ export default async function EskulSayaPage() {
           <h1 className="text-3xl font-black text-slate-900">Eskul Saya</h1>
           <p className="text-sm text-slate-600 font-medium">
             {namaSiswa} &middot; {kelasSiswa} &middot; {eskulDiikuti.length}{" "}
-            eskul diikuti
+            esktul diikuti
           </p>
         </div>
 
