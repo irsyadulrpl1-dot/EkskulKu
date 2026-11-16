@@ -4,13 +4,13 @@ import {
   ekskul,
   JAM_SESI,
   batalkanPendaftaran,
-} from "@/app/Data/ekskul";
+} from "@/app/Data/ekskul"; // Tetap pakai 'Data' huruf besar
 import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
-// Konfigurasi agar Next.js tahu halaman ini bersifat dinamis (menggunakan cookies)
-export const dynamic = "force-dynamic";
+// Solusi resmi Next.js terbaru untuk mengatasi error cookies/prerender tanpa bentrok
+export const instant = false;
 
 export const metadata: Metadata = {
   title: "Eskul Saya",
