@@ -9,6 +9,9 @@ import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
 
+// Konfigurasi agar Next.js tahu halaman ini bersifat dinamis (menggunakan cookies)
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Eskul Saya",
 };
