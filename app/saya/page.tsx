@@ -1,10 +1,11 @@
 import { Metadata } from "next";
+// Perhatikan perubahan jalur import di bawah ini menjadi folder 'data' (huruf kecil)
 import {
   pendaftar,
   ekskul,
   JAM_SESI,
   batalkanPendaftaran,
-} from "@/app/Data/ekskul"; // Sesuaikan Data / data
+} from "@/app/Data/ekskul";
 import { cookies } from "next/headers";
 import { revalidatePath } from "next/cache";
 import Link from "next/link";
@@ -12,6 +13,9 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Eskul Saya",
 };
+
+// PERHATIKAN: Baris "export const dynamic = 'force-dynamic';" sudah dihapus
+// karena konflik dengan cacheComponents di Next.js versi terbaru.
 
 export default async function EskulSayaPage() {
   const cookieStore = await cookies();
